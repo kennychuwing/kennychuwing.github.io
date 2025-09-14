@@ -6,6 +6,19 @@
 </head>
 <body class="theme-light">
 
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="#undergraduate">Undergraduate</a>
+  <a href="#skills">Skills</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
 <h1>Kenny Chuwing</h1>
 
 <div class="center-container">
@@ -25,7 +38,9 @@
 
     <p>In my free time, I like to travel, solve puzzles, play board and video games, and go hiking.</p>
 
-<h2>Projects</h2>
+    <div id="container"><button id="myButton">Click Me!</button><script src="button.js"></script></div>
+
+<h2><a href="projects.html">Projects</a></h2>
     <p>Here are some of my past projects.</p>
 
     <p>[UNDISCLOSED] - National Institutes of Health Project</p>
