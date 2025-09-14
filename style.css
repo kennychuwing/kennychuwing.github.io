@@ -18,16 +18,14 @@ https://forum.obsidian.md/t/style-grid-background-and-dotted-background/90681 */
 /* Referenced Topbar nav from: 
 https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 
-/* Add a black background color to the top navigation */
 .topnav {
   background-color: #60a2ca;
+  display: flex;
   overflow: hidden;
+  margin: 10px;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  display: block;
   color: #E4F1F4;
   text-align: center;
   padding: 14px 16px;
@@ -51,10 +49,25 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 .topnav .icon {
   display: none;
 }
-.center-container {
+
+img, .topnav, .flex-container {
+  border-radius: 12px;
+}
+
+.flex-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  gap: 12px;
+  
+  padding: 20px;              /* inside spacing */
+  margin: 40px auto;          /* outside spacing, auto centers horizontally */
+  border: 2px solid #333;     /* border around the box */
+  background-color: #f9f9f9;  /* background inside the box */
+  width: fit-content;         /* shrink box to fit content */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow for depth */
 }
 
 body {
@@ -125,7 +138,6 @@ btn {
     color: white;
 }
 
-   
 .warning {
     background: yellow;
     color:black;
