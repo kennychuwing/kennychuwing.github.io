@@ -64,8 +64,8 @@ img, .topnav, .flex-container {
   
   padding: 20px;              /* inside spacing */
   margin: 40px auto;          /* outside spacing, auto centers horizontally */
-  border: 2px solid #333;     /* border around the box */
-  background-color: #f9f9f9;  /* background inside the box */
+  border: 1px solid #0d5b9f;     /* border around the box */
+  background-color: #c0f3ff;  /* background inside the box */
   width: fit-content;         /* shrink box to fit content */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow for depth */
 }
