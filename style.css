@@ -124,7 +124,6 @@ ul {
 .button-container {
   display: flex;         /* Arranges children in a row */
   gap: 10px;             /* Space between buttons */
-  overflow: hidden;
   padding: 20px;
 }
 
@@ -137,25 +136,21 @@ ul {
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #04AA6D;
+  background-color: #1191d1;
   border: none;
   border-radius: 50%;
   box-shadow: 0 4px #999;
 }
 
 .button:hover {
-  background-color: #3e8e41;
+  background-color: #1191d1;
   box-shadow: 0 0px #666;
   transform: translateY(4px);
 }
 
 .button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 -4px #666;
-    /* clip bottom part */
-  clip-path: polygon(
-    0% 0%, 
-    100% 0%, 
-    100% 80%,  /* bottom 20% clipped */
-    0% 80%
+  background-color: #1191d1;
+  transform: translateY(8px);
+  box-shadow: 0 -4px #999;
+  clip-path: circle(50% at 50% 40%); /* move circle center up → bottom clipped */
 }
