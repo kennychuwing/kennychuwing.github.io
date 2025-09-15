@@ -50,7 +50,7 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
   display: none;
 }
 
-img, .topnav, .flex-container {
+img, .topnav, .flex-container, .accordion {
   border-radius: 12px;
 }
 
