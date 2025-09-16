@@ -1,18 +1,11 @@
-
 /* Referenced Dark/Light Dot Theme from: 
 https://forum.obsidian.md/t/style-grid-background-and-dotted-background/90681 */
-.theme-dark {
-  --background-primary: #121212;
-  --grid-line-color-1: #3d3d3f66;
-  --grid-line-color-2: #74747440;
-  --grid-dot-color: #c7c7c71f;
-}
 
 .theme-light {
-  --background-primary: #E4F1F4;
-  --grid-line-color-1: #B9D9EB;
-  --grid-line-color-2: #B9D9EB;
-  --grid-dot-color: #B9D9EB;
+  --background-primary: #e4f1f4;
+  --grid-line-color-1: #b9d9eb;
+  --grid-line-color-2: #b9d9eb;
+  --grid-dot-color: #b9d9eb;
 }
 
 /* Referenced Topbar nav from: 
@@ -22,11 +15,11 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
   background-color: #60a2ca;
   display: flex;
   overflow: hidden;
-  margin: 10px;
+  margin: 12px;
 }
 
 .topnav a {
-  color: #E4F1F4;
+  color: #e4f1f4;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -35,14 +28,14 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ffffff;
+  background-color: #e4f1f4;
   color: #070454;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
   background-color: #070454;
-  color: #E4F1F4;
+  color: #e4f1f4;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -50,7 +43,10 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
   display: none;
 }
 
-img, .topnav, .flex-container, .accordion {
+img,
+.topnav,
+.flex-container,
+.accordion {
   border-radius: 12px;
 }
 
@@ -61,22 +57,25 @@ img, .topnav, .flex-container, .accordion {
   align-items: center;
   text-align: center;
   gap: 12px;
-  
-  padding: 20px;              /* inside spacing */
-  margin: 40px auto;          /* outside spacing, auto centers horizontally */
-  border: 1px solid #0d5b9f;     /* border around the box */
-  background-color: #c0f3ff;  /* background inside the box */
-  width: fit-content;         /* shrink box to fit content */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow for depth */
+
+  padding: 20px; /* inside spacing */
+  margin: 40px auto; /* outside spacing, auto centers horizontally */
+  border: 1px solid #0d5b9f; /* border around the box */
+  background-color: #bdecf7; /* background inside the box */
+  width: fit-content; /* shrink box to fit content */
+  box-shadow: 0 4px 8px #0000001a; /* optional shadow for depth */
 }
 
 body {
   height: 100%;
-  background-image: radial-gradient(circle, var(--grid-dot-color) 3px, var(--background-primary) 3px);
+  background-image: radial-gradient(
+    circle,
+    var(--grid-dot-color) 3px,
+    var(--background-primary) 3px
+  );
   background-size: 20px 20px;
   background-position: center center;
-  font-family: Georgia, serif;
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #myBtn {
@@ -122,13 +121,14 @@ ul {
 }
 
 .button-container {
-  display: flex;         /* Arranges children in a row */
-  gap: 10px;             /* Space between buttons */
-  padding: 20px;
+  display: flex; /* Arranges children in a row */
+  gap: 15px; /* Space between buttons */
+  padding: 10px;
+  justify-content: center;
 }
 
 .button {
-  width: 50px; 
+  width: 50px;
   height: 50px;
   padding: 10px;
   font-size: 24px;
@@ -152,13 +152,15 @@ ul {
   background-color: #1191d1;
   transform: translateY(8px);
   box-shadow: 0 -4px #999;
-  clip-path: circle(50% at 50% 40%); /* move circle center up → bottom clipped */
+  clip-path: circle(
+    50% at 50% 40%
+  ); /* move circle center up → bottom clipped */
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #60a2ca;
-  color: #E4F1F4;
+  color: #e4f1f4;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -170,7 +172,8 @@ ul {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #070454;
 }
 
@@ -182,176 +185,164 @@ ul {
   overflow: hidden;
 }
 
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
-.ticket{
+.ticket {
   display: inline-block;
   width: 350px;
   margin: 20px;
   background-color: #273138;
   border-radius: 10px;
   color: #fff;
-  font-family: Helvetica Neue;
   font-weight: 300;
   letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  header{
-    position: relative;
-    height: 35px;
-    background-color: #1B252E;
-    padding: 10px;
-    border-radius: 10px;
-    .company-name{
-      line-height: 35px;
-      text-align: left;
-    }
-    .gate{
-      position: absolute;
-      right: 15px;
-      top: 10px;
-      font-weight: 400;
-      line-height: 18px;
-      text-align: center;
-      font-size: 12px;
-    }
-    &:after{
-      content: '';
-      width: 16px;
-      height: 16px;
-      background-color: #fff;
-      position: absolute;
-      bottom: -8px;
-      right: -8px;
-      border-radius: 50%;
-      box-shadow: inset 12px 0px 18px -11px rgba(0,0,0,0.5);
-    }
-    &:before{
-      content: '';
-      width: 16px;
-      height: 16px;
-      background-color: #fff;
-      position: absolute;
-      bottom: -8px;
-      left: -8px;
-      border-radius: 50%;
-      box-shadow: inset -12px 0px 18px -11px rgba(0,0,0,0.5);
-    }
-  }
-  .airports{
-    padding: 5px 10px 10px 10px;
-    height: 100px;
-    text-align: center;
-    position: relative;
-    border-bottom: 2px dashed #000;
-    .airport {
-      position: relative;
-      margin: 10px;
-      text-align: center;
-      display: inline-block;
-      .airport-name{
-        color: #29A8EB;
-        font-size: 12px;
-        font-weight: 400;
-      }
-      .airport-code{
-        font-size: 32px;
-        font-weight: 400;
-        margin: 5px 0;
-      }
-      .dep-arr-label{
-        color: #9299A0;
-        font-size: 12px;
-        font-weight: 500;
-      }
-      .time{
-        font-size: 10px;
-        color: #9299A0;
-      }
-      &:first-child{
-        margin-right: 40%;
-        &:after{
-          font-family: FontAwesome;
-          color: #353E48;
-          content: "\f072";
-          position: absolute;
-          font-size: 55px;
-          top: calc(50% - 25px);
-          right: -150%;
-        }
-      }
-    }
-    &:after{
-      content: '';
-      width: 16px;
-      height: 16px;
-      background-color: #fff;
-      position: absolute;
-      bottom: -8px;
-      right: -8px;
-      border-radius: 50%;
-      box-shadow: inset 12px 0px 18px -11px rgba(0,0,0,0.5);
-    }
-    &:before{
-      content: '';
-      width: 16px;
-      height: 16px;
-      background-color: #fff;
-      position: absolute;
-      bottom: -8px;
-      left: -8px;
-      border-radius: 50%;
-      box-shadow: inset -12px 0px 18px -11px rgba(0,0,0,0.5);
-    }
-  }
-  .place{
-    padding: 10px;
-    text-align: center;
-    height: 330px;
-  }
-  .place-block{
-    display: inline-block;
-    margin: 10px 30px;
-    .place-label{
-      color: #29A8EB;
-      text-transform: uppercase;
-      font-weight: 400;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    .place-value{
-      color: #9299A0;
-      font-size: 12px;
-      font-weight: 500;
-    }
-  }
-  .qr{
-    width: 220px;
-    height: 220px;
-    margin: 20px auto;
-    border-radius: 10px;
-    overflow: hidden;
-    img{
-      width: 100%;
-      height: 100%;
-    }
-  }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.ticket.inverse{
-  background-color: #F8F8F8;
-  header{
-    background-color: #29A8EB;
-  }
-  .airports{
-    border-bottom-color: #D3D6DA;
-  }
-  .airport {
-    &:first-child{
-        &:after{
-            color: #D3D6DA;
-        }
-    }
-    .airport-code{
-      color: #707884;
-      font-weight: 500;
-    }
-  }
+
+/* Header */
+.ticket header {
+  position: relative;
+  height: 35px;
+  background-color: #1b252e;
+  padding: 10px;
+  border-radius: 10px;
 }
+
+.ticket header .school-name {
+  line-height: 35px;
+  text-align: left;
+}
+
+.ticket header .year-major {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ticket header:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  border-radius: 50%;
+  box-shadow: inset 12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+}
+
+.ticket header:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  border-radius: 50%;
+  box-shadow: inset -12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+}
+/* Airports section */
+.ticket .passenger {
+  padding: 5px 10px 10px 10px;
+  height: 100px;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px dashed #000;
+}
+
+.ticket .passenger .passenger-label {
+  text-align: left;
+  color: #29a8eb;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 12px;
+}
+
+.ticket .passenger .passenger-name {
+  font-size: 32px;
+  font-weight: 750;
+  margin: 5px 0;
+}
+
+.ticket .passenger:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  border-radius: 50%;
+  box-shadow: inset 12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+}
+
+.ticket .passenger:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  border-radius: 50%;
+  box-shadow: inset -12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+}
+
+.ticket .airports {
+  padding: 5px 10px 10px 10px;
+  height: 450px;
+  text-align: center;
+  position: relative;
+}
+
+.ticket .airports .airport {
+  position: relative;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.ticket .airports .airport .airport-name {
+  color: #29a8eb;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.ticket .airports .airport .airport-code {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.ticket .airports .airport:first-child {
+  margin-right: 40%;
+}
+
+.ticket .airports .airport:first-child:after {
+  color: #353e48;
+  font: var(--fa-font-solid);
+  content: "\f072";
+  position: absolute;
+  font-size: 55px;
+  top: calc(50% - 25px);
+  right: -160%;
+}
+
+.ticket .gallery {
+  width: 220px;
+  height: 220px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ticket .gallery img {
+  width: 100%;
+  height: 100%;
+  transform: translateX(-70px);
+}
+
+/* License Plate from https://codepen.io/mjh/pen/xEwxBd*/
