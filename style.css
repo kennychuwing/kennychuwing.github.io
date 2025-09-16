@@ -346,3 +346,20 @@ ul {
 }
 
 /* License Plate from https://codepen.io/mjh/pen/xEwxBd*/
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px; /* keeps it from stretching too wide */
+  padding: 10px;
+}
+
+.bento-card {
+  background: #bdecf7;
+  border: 1px solid #0d5b9f;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px #0000001a;
+}
