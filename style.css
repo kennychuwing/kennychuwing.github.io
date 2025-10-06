@@ -361,15 +361,16 @@ ul {
 
 .card {
   display: flex;
+  aspect-ratio: 5 / 7;
   position: relative;
   flex-direction: column;
-  height: 700px;
+  height: auto;
   width: 400px;
   min-width: 250px;
   padding: 1.5rem;
   border-radius: 16px;
   background: #17141d;
-  box-shadow: -1rem 0 3rem #000000a5;
+  box-shadow: -1rem 0 2rem #000000a5;
   color: #e4f1f4;
   transition: 0.2s;
 }
@@ -394,12 +395,12 @@ ul {
 }
 
 .card-body {
-  color: #517a83;
+  color: #9fc7d0;
   margin-bottom: auto;
 }
 
-.card-header h2:hover {
-  background: linear-gradient(90deg, #ff8a00, #c9afb8);
+.card:hover .card-header h2 {
+  background: linear-gradient(90deg, #3edcdf, #d07898);
   text-shadow: none;
   background-clip: text;
   -webkit-background-clip: text;
@@ -426,12 +427,12 @@ ul {
 }
 
 .tags a:hover {
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  background: linear-gradient(90deg, #3edcdf, #d07898);
   text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   background-clip: text;
-  border-color: white;
+  border-color: #ffffff;
 }
