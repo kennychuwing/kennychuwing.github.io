@@ -1,67 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Projects | Kenny Chuwing</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body class="theme-light">
+  <head>
+    <title>Projects | Kenny Chuwing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-light">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="undergradute.html">Undergraduate</a>
+      <a href="skills.html">Skills</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
-<div class="topnav" id="myTopnav">
-  <a href="index.html">About</a>
-  <a href="projects.html" class="active">Projects</a>
-  <a href="undergradute.html">Undergraduate</a>
-  <a href="skills.html">Skills</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-<h2>Projects</h2>
+    <h2>Projects</h2>
     <p>Here are some of my past projects.</p>
 
-    <button class="accordion">[Undisclosed] - National Institutes of Health Project</button>
-    <div class="panel">
-    <p>Can't wait to share more info - Update soon!</p>
-    </div>
+    <!-- Referenced from https://fireship.io/lessons/css-cards-animated/ -->
+    <section class="card-list">
+      <article class="card">
+        <header class="card-header">
+          <h2>[Undisclosed]</h2>
+        </header>
+        <div class="card-body">
+          <p>Can't wait to share more info - Update soon!</p>
+        </div>
+        <div class="card-author">
+          <div class="author-name">National Institutes of Health Project</div>
+        </div>
 
-    <button class="accordion">SpiderShoe - Senior Design Project</button>
-    <div class="panel">
-    <p>The <a href="https://boo2108.wixsite.com/senior-design">SpiderShoe</a> is an engineered shoe 
-    attachment that is design to catch you when you fall. Aimed at aiding those struggling with vertigo 
-    and other balance-related issues, some of the most common health issues that adult face in the US. 
-    The SpiderShoe detects when its wearer begins to tip over, immediately deploys four legs to provide 
-    support to the wearer. These legs extend the wearer's base of support and allow them to regain 
-    their balance without suffering from a potentially dangerous tumble. </p>
-    </div>
+        <div class="tags">
+          <a href="#">html</a>
+        </div>
+      </article>
+      <article class="card">
+        <header class="card-header">
+          <h2>SpiderShoe</h2>
+        </header>
+        <div class="card-body">
+          <p>
+            The
+            <a href="https://boo2108.wixsite.com/senior-design">SpiderShoe</a>
+            is an engineered shoe attachment that is design to catch you when
+            you fall. Aimed at aiding those struggling with vertigo and other
+            balance-related issues, some of the most common health issues that
+            adult face in the US. The SpiderShoe detects when its wearer begins
+            to tip over, immediately deploys four legs to provide support to the
+            wearer. These legs extend the wearer's base of support and allow
+            them to regain their balance without suffering from a potentially
+            dangerous tumble.
+          </p>
+        </div>
+        <div class="card-author">
+          <div class="author-name">Senior Design Course Project</div>
+        </div>
 
-    <button class="accordion">ArcGIS Maps/Scripts - ArcGIS Course Assignments</button>
-    <div class="panel">
-    <p>Lorem ipsum...</p>
-    </div>
+        <div class="tags">
+          <a href="#">css</a>
+        </div>
+      </article>
+      <article class="card">
+        <header class="card-header">
+          <h2>ArcGIS Maps/Scripts</h2>
+        </header>
+        <div class="card-body">
+          <p>Can't wait to share more info - Update soon!</p>
+        </div>
+        <div class="card-author">
+          <div class="author-name">ArcGIS Course Assignments</div>
+        </div>
 
-    <button class="accordion">Automated Robotic Linkage System - Machine Design Project</button>
-    <div class="panel">
-    <p>This group project involved designing, fabricating, and controlling a four-bar linkage mechanism 
-    capable of pressing randomly illuminated arcade buttons in a rapid sequence. The goal was to optimize 
-    both speed and accuracy using an Arduino Uno and tuning a PID controller. This system was modeled 
-    and analyzed in SOLIDWORKS, then manufactured piece-by-piece and wired/coded integrated for automated 
-    actuation. </p>
-    </div>
+        <div class="tags">
+          <a href="#">web-dev</a>
+        </div>
+      </article>
+      <article class="card">
+        <header class="card-header">
+          <h2>Automated Robotic Linkage System</h2>
+        </header>
+        <div class="card-body">
+          <p>
+            This group project involved designing, fabricating, and controlling
+            a four-bar linkage mechanism capable of pressing randomly
+            illuminated arcade buttons in a rapid sequence. The goal was to
+            optimize both speed and accuracy using an Arduino Uno and tuning a
+            PID controller. This system was modeled and analyzed in SOLIDWORKS,
+            then manufactured piece-by-piece and wired/coded integrated for
+            automated actuation.
+          </p>
+        </div>
+        <div class="card-author">
+          <div class="author-name">Machine Design Course Project</div>
+        </div>
 
-    <button class="accordion">Balancing Backpack Concept - Columbia Hackathon</button>
-    <div class="panel">
-    <p>Developed during a 24-hour school hackathon, this concept/prototype explores the use of a capstan-based 
-    folding mechanism to provide balance and counteract an impending fall. The design integrates a system 
-    of specifically-positioned rotating weights inside a backpack that spins in the opposite direction of
-    a fall, counteracting inertia and helping the wearer regain balance. The prototype aimed to demonstrate 
-    how compact mechanical actuation could be applied to wearable safety technology for improved motion 
-    control and fall prevention.</p>
-    </div>
+        <div class="tags">
+          <a href="#">html</a>
+          <a href="#">css</a>
+        </div>
+      </article>
+      <article class="card">
+        <header class="card-header">
+          <h2>Balancing Backpack Concept</h2>
+        </header>
+        <div class="card-body">
+          <p>
+            Developed during a 24-hour school hackathon, this concept/prototype
+            explores the use of a capstan-based folding mechanism to provide
+            balance and counteract an impending fall. The design integrates a
+            system of specifically-positioned rotating weights inside a backpack
+            that spins in the opposite direction of a fall, counteracting
+            inertia and helping the wearer regain balance. The prototype aimed
+            to demonstrate how compact mechanical actuation could be applied to
+            wearable safety technology for improved motion control and fall
+            prevention.
+          </p>
+        </div>
+        <div class="card-author">
+          <div class="author-name">Columbia Hackathon</div>
+        </div>
 
-<script src="button.js"></script>
-
-</body>
+        <div class="tags">
+          <a href="#">html</a>
+        </div>
+      </article>
+    </section>
+    <script src="button.js"></script>
+  </body>
 </html>
