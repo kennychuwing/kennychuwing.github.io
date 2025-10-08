@@ -487,8 +487,8 @@ ul {
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
+  color: #e41b1b;
+  font-size: 10px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -499,7 +499,12 @@ ul {
   text-align: center;
   background-color: #222;
   padding: 2px 16px;
-  color: white;
+  color: #ceac23;
+}
+
+#caption {
+  font-size: 12px;
+  text-align: center;
 }
 
 .row:after {
@@ -511,12 +516,12 @@ ul {
 /* Six columns side by side */
 .column {
   float: left;
-  width: 16.66%;
+  width: 20%;
 }
 
 /* Add a transparency effect for thumnbail images */
 .demo {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .active,
