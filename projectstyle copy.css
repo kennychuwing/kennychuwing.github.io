@@ -2,41 +2,82 @@
 https://forum.obsidian.md/t/style-grid-background-and-dotted-background/90681 */
 
 .theme-light {
-  --background-primary: #e4f1f4;
-  --grid-dot-color: #b9d9eb;
+  background-color: #012a4a;
 }
 
-/* Referenced Topbar nav from: 
-https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+:root {
+  --nav-bg: #2a628f;
+  --nav-text: #a9d6e5;
+  --nav-hover-bg: #a9d6e5;
+  --nav-hover-text: #070454;
+  --nav-active-bg: #070454;
+  --nav-active-text: #ffffff;
+}
 
 .topnav {
-  background-color: #60a2ca;
   display: flex;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nav-bg);
+  padding: 8px 12px;
   margin: 12px;
+  border-radius: 12px;
+  gap: 12px;
 }
 
-.topnav a {
-  color: #e4f1f4;
-  text-align: center;
-  padding: 14px 16px;
+/* ---- SHARED LINK + BUTTON STYLE ---- */
+.topnav a,
+.dropbtn {
+  color: var(--nav-text);
+  background: transparent;
+  padding: 8px 12px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #e4f1f4;
-  color: #070454;
+/* Hover (shared) */
+.topnav a:hover,
+.dropdown:hover .dropbtn,
+.dropdown-content a:hover {
+  background-color: var(--nav-hover-bg);
+  color: var(--nav-hover-text);
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #070454;
-  color: #e4f1f4;
+  background-color: var(--nav-active-bg);
+  color: var(--nav-active-text);
 }
 
-/* Hide the link that should open and close the topnav on small screens */
+/* ---- DROPDOWN ---- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--nav-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--nav-text);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hide responsive icon for now */
 .topnav .icon {
   display: none;
 }
@@ -155,168 +196,6 @@ ul {
   ); /* move circle center up → bottom clipped */
 }
 
-.ticket {
-  display: inline-block;
-  width: 350px;
-  margin: 20px;
-  background-color: #273138;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 300;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Header */
-.ticket header {
-  position: relative;
-  height: 35px;
-  background-color: #1b252e;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.ticket header .school-name {
-  line-height: 35px;
-  text-align: left;
-}
-
-.ticket header .year-major {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.ticket header:after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  border-radius: 50%;
-  box-shadow: inset 12px 0px 18px -11px rgba(0, 0, 0, 0.5);
-}
-
-.ticket header:before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  position: absolute;
-  bottom: -8px;
-  left: -8px;
-  border-radius: 50%;
-  box-shadow: inset -12px 0px 18px -11px rgba(0, 0, 0, 0.5);
-}
-/* Airports section */
-.ticket .passenger {
-  padding: 5px 10px 10px 10px;
-  height: 100px;
-  text-align: center;
-  position: relative;
-  border-bottom: 2px dashed #000;
-}
-
-.ticket .passenger .passenger-label {
-  text-align: left;
-  color: #29a8eb;
-  font-size: 12px;
-  font-weight: 400;
-  margin: 12px;
-}
-
-.ticket .passenger .passenger-name {
-  font-size: 32px;
-  font-weight: 750;
-  margin: 5px 0;
-}
-
-.ticket .passenger:after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  border-radius: 50%;
-  box-shadow: inset 12px 0px 18px -11px rgba(0, 0, 0, 0.5);
-}
-
-.ticket .passenger:before {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  position: absolute;
-  bottom: -8px;
-  left: -8px;
-  border-radius: 50%;
-  box-shadow: inset -12px 0px 18px -11px rgba(0, 0, 0, 0.5);
-}
-
-.ticket .airports {
-  padding: 5px 10px 10px 10px;
-  height: 450px;
-  text-align: center;
-  position: relative;
-}
-
-.ticket .airports .airport {
-  position: relative;
-  margin: 10px;
-  text-align: center;
-  display: inline-block;
-}
-
-.ticket .airports .airport .airport-name {
-  color: #29a8eb;
-  font-size: 10px;
-  font-weight: 400;
-}
-
-.ticket .airports .airport .airport-code {
-  font-size: 32px;
-  font-weight: 400;
-  margin: 5px 0;
-}
-
-.ticket .airports .airport:first-child {
-  margin-right: 40%;
-}
-
-.ticket .airports .airport:first-child:after {
-  color: #353e48;
-  font: var(--fa-font-solid);
-  content: "\f072";
-  position: absolute;
-  font-size: 55px;
-  top: calc(50% - 25px);
-  right: -160%;
-}
-
-.ticket .gallery {
-  width: 220px;
-  height: 220px;
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.ticket .gallery img {
-  width: 100%;
-  height: 100%;
-  transform: translateX(-70px);
-}
-
-/* License Plate from https://codepen.io/mjh/pen/xEwxBd*/
-
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -354,7 +233,7 @@ ul {
 }
 
 .card-list::-webkit-scrollbar-track {
-  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+  background: linear-gradient(90deg, #7d68ac, #201c29 1px, #17141d 0, #17141d);
 }
 
 .card {
@@ -367,9 +246,9 @@ ul {
   min-width: 250px;
   padding: 1.5rem;
   border-radius: 16px;
-  background: #17141d;
-  box-shadow: -1rem 0 2rem #000000a5;
-  color: #e4f1f4;
+  background: var(--nav-bg);
+  box-shadow: -1rem 0 1rem #000000a5;
+  color: #b1bac5;
   transition: 0.2s;
 }
 
@@ -389,16 +268,16 @@ ul {
   font-size: 20px;
   margin: 0.25rem 0 auto;
   cursor: pointer;
-  color: #e4f1f4;
+  color: #1A3D64;
 }
 
 .card-body {
-  color: #9fc7d0;
+  color: var(--nav-text);
   margin-bottom: auto;
 }
 
 .card:hover .card-header h2 {
-  background: linear-gradient(90deg, #3edcdf, #d07898);
+  background: linear-gradient(90deg, #94ece9, var(--nav-text));
   text-shadow: none;
   background-clip: text;
   -webkit-background-clip: text;
