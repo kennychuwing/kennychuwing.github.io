@@ -2,8 +2,7 @@
 https://forum.obsidian.md/t/style-grid-background-and-dotted-background/90681 */
 
 .theme-light {
-  --background-primary: #e4f1f4;
-  --grid-dot-color: #b9d9eb;
+  background-color: #e4f1f4;
 }
 
 /* Referenced Topbar nav from: 
@@ -12,6 +11,8 @@ https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 .topnav {
   background-color: #60a2ca;
   display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   margin: 12px;
 }
