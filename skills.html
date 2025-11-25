@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Skills | Kenny Chuwing</title>
+<link rel="stylesheet" href="navigationbar.css">
+<link rel="stylesheet" href="undergraduate.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-light">
@@ -12,19 +14,84 @@
 <div class="topnav" id="myTopnav">
   <a href="index.html">About</a>
   <a href="projects.html">Projects</a>
-  <a href="undergradute.html">Undergraduate</a>
+  <a href="undergraduate.html">Undergraduate</a>
   <a href="skills.html" class="active">Skills</a>
-  <a href="hikes.html">Hikes</a>
-  <a href="peaks.html">Peaks</a>
+      <div class="dropdown">
+    <button class="dropbtn">Personal Documentation
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <li><a href="hikes.html">Hikes</a></li>
+      <li><a href="peaks.html">Peaks</a></li>
+    </div></div> 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 
-<h2>Skills</h2>
-<p>Languages: English, Spanish, Cantonese</p>
-<p>Software: SOLIDWORKS, AutoCAD, MATLAB, Java, Python, MPLab, Arduino IDE, ArcGIS, Stata, [Git, HTML, CSS?]</p>
-<p>Hardware: CNC Mill, CNC Lathe, Soldering, 3D Printing (incl. TPU), 3D Scanning (Artec Studio), Laser Cutting, Sailing</p>
+<div class="m-dropdown">
+	<div class="e-button open">
+		Languages
+		<div class="e-burger">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<ul class="e-list">
+		<li><a href="#">English</a></li>
+		<li><a href="#">Spanish</a></li>
+		<li><a href="#">Cantonese</a></li>
+	</ul>
+</div>
 
+<div class="m-dropdown">
+	<div class="e-button open">
+		Software
+		<div class="e-burger">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<ul class="e-list">
+		<li><a href="#">SOLIDWORKS</a></li>
+		<li><a href="#">AutoCAD</a></li>
+		<li><a href="#">MATLAB</a></li>
+    <li><a href="#">Java</a></li>
+		<li><a href="#">Python</a></li>
+		<li><a href="#">MPLab</a></li>		
+    <li><a href="#">Arduino IDE</a></li>
+		<li><a href="#">ArcGIS</a></li>
+		<li><a href="#">Stata</a></li>
+	</ul>
+</div>
+
+<div class="m-dropdown">
+	<div class="e-button open">
+		Hardware
+		<div class="e-burger">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<ul class="e-list">
+		<li><a href="#">CNC Mill</a></li>
+		<li><a href="#">CNC Lathe</a></li>
+		<li><a href="#">3D Printing (incl. with TPU)</a></li>
+		<li><a href="#">3D Scanning (Artec Studio)</a></li>
+    <li><a href="#">Soldering</a></li>
+		<li><a href="#">Laser Cutting</a></li>
+    <li><a href="#">Sailing</a></li>
+	</ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="undergraduate.js"></script>
 </body>
 </html>

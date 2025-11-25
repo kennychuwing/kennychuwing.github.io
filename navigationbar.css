@@ -1,0 +1,79 @@
+.theme-light {
+  background-color: #012a4a;
+}
+
+:root {
+  --nav-bg: #2a628f;
+  --nav-text: #a9d6e5;
+  --nav-hover-bg: #a9d6e5;
+  --nav-hover-text: #070454;
+  --nav-active-bg: #070454;
+  --nav-active-text: #ffffff;
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nav-bg);
+  padding: 8px 12px;
+  margin: 12px;
+  border-radius: 12px;
+  gap: 12px;
+}
+
+.topnav a,
+.dropbtn {
+  color: var(--nav-text);
+  background: transparent;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn,
+.dropdown-content a:hover {
+  background-color: var(--nav-hover-bg);
+  color: var(--nav-hover-text);
+  box-shadow: 0 0px #666;
+  transform: translateY(2px);
+}
+
+.topnav a.active {
+  background-color: var(--nav-active-bg);
+  color: var(--nav-active-text);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--nav-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--nav-text);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hide responsive icon for now */
+.topnav .icon {
+  display: none;
+}

@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Hikes | Kenny Chuwing</title>
+<link rel="stylesheet" href="navigationbar.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-light">
@@ -12,10 +13,16 @@
 <div class="topnav" id="myTopnav">
   <a href="index.html">About</a>
   <a href="projects.html">Projects</a>
-  <a href="undergradute.html">Undergraduate</a>
+  <a href="undergraduate.html">Undergraduate</a>
   <a href="skills.html">Skills</a>
-  <a href="hikes.html" class="active">Hikes</a>
-  <a href="peaks.html">Peaks</a>
+        <div class="dropdown">
+    <button class="dropbtn">Personal Documentation
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="hikes.html" class="active">Hikes</a>
+      <a href="peaks.html">Peaks</a>
+    </div></div> 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
